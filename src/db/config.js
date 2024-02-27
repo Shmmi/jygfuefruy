@@ -1,8 +1,9 @@
 import Sequelize  from "sequelize";
-const sequelize = new Sequelize("mern12","postgres","1234567",{
+const env = process.env;
+const sequelize = new Sequelize(env.db_name,env.db_user,env.db_password,{
     port: 5432,
-    host: "localhost",
-    dialect: "postgres",
+    host: env.db_host,
+    dialect: env.db_dialect,
 });
 const connectDB = async () =>{
     try{

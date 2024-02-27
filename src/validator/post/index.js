@@ -6,7 +6,7 @@ const PostValidator = {
       title: Joi.string().min(3).max(90).required(),
 
       description: Joi.string().max(950),
-      UserId: Joi.number(),
+      userId: Joi.number(),
     });
 
     const response = schema.validate(req.body);

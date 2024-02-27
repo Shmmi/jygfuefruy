@@ -4,5 +4,5 @@ import commentValidator from "../../validator/comment/index.js";
 const commentRoute = Router();
 commentRoute.get("/comment",commentController.getAll);
 commentRoute.post("/comment",commentValidator.create,commentController.create);
-commentRoute.put("/comment",commentController.update);
+commentRoute.put("/comment/:commentId",commentController.update);
 export default commentRoute;

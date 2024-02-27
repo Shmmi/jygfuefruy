@@ -7,7 +7,7 @@ const PostController = {
       const post = await postModel.create({
         title: payload.title,
         description: payload.description,
-        UserId: payload.UserId,
+        UserId: payload.userId,
       });
   
       res.json({

@@ -8,7 +8,7 @@ const commentController = {
       const comment = await commentModel.create({
         content: payload.content,
         postId: payload.postId,
-        UserId: payload.UserId,
+        userId: payload.userId,
       });
   
       res.json({

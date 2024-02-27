@@ -1,5 +1,13 @@
 import userModel from "../../model/user/index.js";
 const UserController = {
+  get: async (req,res)=>{
+  
+    const user = await userModel.findAll()
+    res.json({
+      user,
+    })
+  
+  },
     create: async (req, res) => {
       const payload = req.body;
   
