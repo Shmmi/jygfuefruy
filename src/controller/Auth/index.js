@@ -14,9 +14,11 @@ const authController ={
     const token = jwt.sign({
         name:user.name,
         email:user.email,
-        expiry:Math.floor(Date.now() / 1000) + 60 * 60,
+       
     },
-    process.env.signature);
+    process.env.signature,{
+        expiresIn:"2m"
+    });
     res.json({
         message:"User logged in successfully",
         token,

@@ -3,9 +3,9 @@ import Joi from "joi";
 const PostValidator = {
   create: (req, res, next) => {
     const schema = Joi.object({
-      title: Joi.string().min(3).max(90).required(),
+      title: Joi.string().min(3).max(20).required(),
 
-      description: Joi.string().max(950),
+      description: Joi.string().max(200),
       userId: Joi.number(),
     });
 
