@@ -1,7 +1,7 @@
 import  Router  from "express";
-
-const EmaiRouter = Router();
 import main from "../../controller/Email/index.js";
+const EmaiRouter = Router();
+
 
 EmaiRouter.post('/sendEmail',main)
 

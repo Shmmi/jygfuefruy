@@ -21,6 +21,7 @@ const commentModel=sequelize.define(
     },
     {
         paranoid:true,
+        
     }
 );
 userModel.hasMany(commentModel);

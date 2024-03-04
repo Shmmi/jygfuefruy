@@ -9,7 +9,7 @@ const userModel = sequelize.define(
             type: DataTypes.STRING(50),
         },
         password:{
-            type:DataTypes.STRING(20),
+            type:DataTypes.STRING(),
         },
     },
     {

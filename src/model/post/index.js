@@ -1,6 +1,8 @@
 import { DataTypes} from "sequelize";
 import userModel from "../user/index.js";
 import sequelize from "../../db/config.js";
+
+
 const postModel= sequelize.define(
     "Post",{
         title:{

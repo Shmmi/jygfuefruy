@@ -45,6 +45,14 @@ const PostController = {
           posts,
         });
       },
+      destroy: async (req, res) => {
+        const posts = await postModel.destroy({
+          where:{id:req.params.id}
+        });
+        res.json({
+          posts,
+        });
+      },
     };
     
     export default PostController;

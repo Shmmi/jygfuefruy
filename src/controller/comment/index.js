@@ -28,6 +28,7 @@ const commentController = {
         }
     
         comment.content = payload.content;
+        comment.userId = payload.userId
         //post.description = payload.description;
     
         await comment.save();
